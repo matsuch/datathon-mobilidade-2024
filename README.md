@@ -37,9 +37,7 @@ Ao término da análise, algumas hipóteses e possíveis causas para o desempenh
 
 ### Base de Dados
 - **Ausência de Informações Relevantes:** A ausência de informações relevantes, o preenchimento errado ou insuficiente pode ter prejudicado a compreensão da relação entre os empreendimentos e as taxas de mortalidade no trânsito.
-<p></p>
 - **Outras obras não listadas:** Ainda que a base de dados dos empreendimentos estivesse robusta, outras obras podem ter sido realizadas nos municípios analisados por fontes de recursos próprios ou por meio de outros programas não relacionados na base de dados atual. A dificuldade no rastreio de tais possíveis obras pode ter comprometido a identificação das ações de trânsito que contribuíram para reduções nas taxas de mortalidade em algumas cidades que apresentaram bons índices neste quesito.
-<p></p>
 - **Variáveis Não Capturadas:** É possível que outros fatores relevantes não estejam sendo considerados nos dados, como condições meteorológicas, características demográficas, ou políticas de educação no trânsito.
 
 ### Complexidade da Relação
@@ -50,9 +48,7 @@ Em resumo, embora esta análise tenha fornecido percepções relevantes, é impo
 ## Recomendações para futuros avanços
 
 - **Aprimoramento da captação e manutenção da base de dados:** Garantir uma base mais sólida, envolvendo a colaboração com órgãos governamentais de todas as esferas.
-<p></p>
 - **Expansão do Escopo de Variáveis:** Adicionar outras variáveis de forma a expandir o escopo analisado, como condições meteorológicas, características demográficas, obras de outros empreendimentos/programas e implementação de políticas de educação de trânsito.
-<p></p>
 - **Reavaliação dos Modelos:** Com melhorias implantadas na manutenção dos bancos de dados, realizar novamente os modelos aqui propostos, permitindo uma nova análise dos resultados em busca de uma validação estatística.
 
 Desta forma, espera-se que, com as melhorias na base de dados e a inclusão de novas variáveis, seja possível obter uma compreensão mais precisa e abrangente da relação entre empreendimentos de mobilidade urbana e segurança no trânsito.
