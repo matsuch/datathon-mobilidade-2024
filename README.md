@@ -25,7 +25,7 @@ O código deve ser executado sem problemas usando Python versões 3 com as segui
 ## Descrição dos arquivos <a name="files"></a>
 
 - **Dados**
-  - codigo_completo.ipynb - *Código python do jupyter utilizado na análise*
+  - codigo_python.ipynb - *Código python do jupyter utilizado na análise*
   - df_empreendimentos.csv - *tabela com todos os empreendimentos a serem analisados*
   - df_acidentes.csv - *tabela com os acidentes de todos as cidades ano a ano*
   - df_municipios.csv - *tabela com informações dos municípios*
