@@ -1,64 +1,58 @@
-# Amazon Web Scraping
+# Datathon de Mobilidade Urbana 2024
 
 ### Sumario
 
-1. [Resumo](#brief)
+1. [Sobre o projeto](#brief)
 2. [Requisitos](#requirements)
-3. [Instruções de instalação](#installation)
-4. [Descrição dos arquivos](#files)
-5. [Resultado](#results)
+3. [Descrição dos arquivos](#files)
+4. [Resultado](#results)
 
-## Resumo do projeto <a name="brief"></a>
+## Sobre o projeto <a name="brief"></a>
 
-Este projeto tem como objetivo realizar a extração de alguns dados do site amazon.com utilizando a biblioteca BeautifulSoup e enviá-los para o google sheets. Dados extraidos:
-  - Link do produto
-  - Nome do produto
-  - Valor
-  - Avaliação (nota)
-  - Disponibilidade (Em estoque)
+Desafio 1: Correlação entre empreendimentos em mobilidade urbana e indicadores de mortos e feridos no trânsito: uma análise com base nos dados da MCID/SEMOB e do atlas da violência
 
-![amazon_webscraping](https://github.com/matsuch/amazon-web_scraping/assets/77889112/1e037e70-9351-46ab-b8ab-6b66185d8685)
+O projeto tem como objetivo analisar os empreendimentos em mobilidade urbana da carteira de empreendimentos da MCID/SEMOB e sua correlação no território com os indicadores de mortos e feridos no trânsito mantidos pelo Atlas da Violência, considerando o tipo de programa do empreendimento.
 
 ## Requisitos <a name="requirements"></a>
 
 O código deve ser executado sem problemas usando Python versões 3 com as seguintes bibliotecas: 
-  - Web Scrapping: BeautifulSoup
-  - Google Integrations: Oauth2client, gspread
-
-## Instruções de instalação <a name="installation"></a>
-
-1. Crie um projeto na sua conta do Google Drive.
-
-    - Habilite as APIs do Google Drive e Google Sheets.
-    - Crie as credenciais de acesso e gere o arquivo JSON, salve como "credenciais.json"
-    - Tutorial: https://pt.linkedin.com/pulse/manipulando-planilhas-do-google-usando-python-renan-pessoa
-
-2. Faça login na sua conta amazon e na página inicial acesse o inspetor do navegador (F12)
-
-    - Procure por Rede, no primeiro link que aparecer clique com o botão direito do mouse e vá em Copiar valor > Copiar como cURL
-
-    ![baixar_ccurl](https://github.com/matsuch/amazon-web_scraping/assets/77889112/86f86e1d-4599-4835-bf0d-d06dfc50cbb2)
-
-    - Acesse o site: https://curlconverter.com/ copie o cCurl e converta em JSON.
-    - Acesse o site: https://jsoneditoronline.org/#left=local.pelema e salve como "url_parameters.json"
-
-3. Abra o arquivo "links.csv" e informe todas as URLs que você deseja buscar, cada URL em uma linha (mantenha o cabecalho)
-
-4. Abra o arquivo "web_scraping.py" e na linha 83 informe o ID do seu Google Sheets.
-
-![Captura de tela de 2023-06-12 22-30-06](https://github.com/matsuch/amazon-web_scraping/assets/77889112/97046eb7-4d73-46e0-ab88-5fbbb8607c45)
+  - Visualização de dados: matplotlib, seaborn, plotly, wordcloud
+  - Manipulação e Análise de Dados: pandas, numpy, collections
+  - Widgets para Jupyter Notebook: ipywidgets
+  - Processamento de Linguagem Natural (NLP): nltk, unidecode, spacy, gensim
+  - Machine Learning: sklearn
 
 ## Descrição dos arquivos <a name="files"></a>
 
 - **Dados**
-  - links.csv - *tabela com a lista de links que voce deseja buscar*
-  - requirements.txt - *lista das bibliotecas necessarias para rodar o codigo*
-  - web_scraping.py - *Código em python para fazer o web scraping*
-
-**ATENÇÃO**: Não se esqueça de criar os arquivos JSON descritos na etapa **Instruções de instalação**
+  - codigo_completo.ipynb - *Código python do jupyter utilizado na análise*
+  - df_empreendimentos.csv - *tabela com todos os empreendimentos a serem analisados*
+  - df_acidentes.csv - *tabela com os acidentes de todos as cidades ano a ano*
+  - df_municipios.csv - *tabela com informações dos municípios*
+  - df_populacao.csv -  *tabela com as informações populacionais dos municipios*
 
 ## Resultados <a name="results"></a>
 
-Toda vez que você rodar o código, serão adicionadas novas linhas com a data/hora que foi realizado a consulta.
+Ao término da análise, algumas hipóteses e possíveis causas para o desempenho observado na investigação da relação entre os empreendimentos de mobilidade urbana e as taxas de mortalidade no trânsito foram identificadas:
 
-![resultado_webscraping](https://github.com/matsuch/amazon-web_scraping/assets/77889112/1997445e-0464-4c45-a2f9-b245226ff5a2)
+### Base de Dados
+- **Ausência de Informações Relevantes:** A ausência de informações relevantes, o preenchimento errado ou insuficiente pode ter prejudicado a compreensão da relação entre os empreendimentos e as taxas de mortalidade no trânsito.
+<p></p>
+- **Outras obras não listadas:** Ainda que a base de dados dos empreendimentos estivesse robusta, outras obras podem ter sido realizadas nos municípios analisados por fontes de recursos próprios ou por meio de outros programas não relacionados na base de dados atual. A dificuldade no rastreio de tais possíveis obras pode ter comprometido a identificação das ações de trânsito que contribuíram para reduções nas taxas de mortalidade em algumas cidades que apresentaram bons índices neste quesito.
+<p></p>
+- **Variáveis Não Capturadas:** É possível que outros fatores relevantes não estejam sendo considerados nos dados, como condições meteorológicas, características demográficas, ou políticas de educação no trânsito.
+
+### Complexidade da Relação
+- **Fatores interconectados:** A relação entre as características dos empreendimentos de mobilidade urbana e as taxas de mortalidade no trânsito é complexa, envolvendo uma série de fatores interconectados que não foram completamente capturados pelos modelos utilizados. Exemplos incluem ações de educação no trânsito e o fator comportamental dos usuários no sistema viário.
+
+Em resumo, embora esta análise tenha fornecido percepções relevantes, é importante reconhecer as limitações inerentes aos dados e aos modelos utilizados. Futuras pesquisas devem abordar essas questões para avançar na compreensão da relação entre os empreendimentos de mobilidade urbana e a segurança no trânsito, contribuindo para a formulação de políticas mais eficazes e intervenções mais direcionadas.
+
+## Recomendações para futuros avanços
+
+- **Aprimoramento da captação e manutenção da base de dados:** Garantir uma base mais sólida, envolvendo a colaboração com órgãos governamentais de todas as esferas.
+<p></p>
+- **Expansão do Escopo de Variáveis:** Adicionar outras variáveis de forma a expandir o escopo analisado, como condições meteorológicas, características demográficas, obras de outros empreendimentos/programas e implementação de políticas de educação de trânsito.
+<p></p>
+- **Reavaliação dos Modelos:** Com melhorias implantadas na manutenção dos bancos de dados, realizar novamente os modelos aqui propostos, permitindo uma nova análise dos resultados em busca de uma validação estatística.
+
+Desta forma, espera-se que, com as melhorias na base de dados e a inclusão de novas variáveis, seja possível obter uma compreensão mais precisa e abrangente da relação entre empreendimentos de mobilidade urbana e segurança no trânsito.
